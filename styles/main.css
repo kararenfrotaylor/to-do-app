@@ -1,0 +1,19 @@
+html {
+  text-align: center;
+}
+
+header {
+  background: url(../images/do-what-is-great.jpg) center / cover;
+  height: 60vh;
+  justify-content: center;
+  text-align: center
+  opacity: 0.5;
+}
+
+header h1 {
+  padding-top: 33%;
+}
+
+form {
+  padding-top: 8%;
+}
