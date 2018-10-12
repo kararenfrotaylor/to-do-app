@@ -10,10 +10,14 @@ header {
   opacity: 0.5;
 }
 
-header h1 {
-  padding-top: 33%;
+h1 {
+  padding-top: 40%;
+  text-align: center
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
 
 form {
-  padding-top: 8%;
+  padding-top: 15%;
 }
