@@ -9,12 +9,10 @@ function onReady(){
     toDos.push({
       title: newToDoText.value,
       complete: false,
-      id: id
+      id: ++id
     });
+    newToDoText.value = '';
 
-    function deleteToDo (){
-      
-    });
 
   function renderTheUI(){
    const toDoList = document.getElementById('toDoList');
@@ -28,9 +26,11 @@ function onReady(){
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = "Delete!";
 
+
       deleteBtn.addEventListener('click', event => {
        toDos = toDos.filter(function(item){
-         return item.id !== toDos.id
+         return item.id !== toDos.id;
+
         })
 
         renderTheUI();
@@ -44,9 +44,9 @@ function onReady(){
       })
 }
 
-    id++;
+id++;
 
-    newToDoText.value = '';
+newToDoText.value = '';
     renderTheUI();
   }
 
