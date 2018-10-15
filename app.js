@@ -12,8 +12,8 @@ function onReady(){
       complete: false,
       id: ++id
     });
-
     newToDoText.value = '';
+  }
 
     renderTheUI();
   }
@@ -32,27 +32,23 @@ function onReady(){
         delete.textContent = "delete";
 
         deleteBtn.addEventListener('click', () => {
-          return toDos.filter(toDo => toDo.id !== id);
+        return toDos.filter(toDo => toDo.id !== id);
 
-          newLi.textContent = toDo.title;
+        newLi.textContent = toDo.title;
 
-          toDoList.appendChild(newLi);
-          newLi.appendChild(checkbox);
-          newLi.appendChild(deleteBtn);
-        });
-      }
-
-        renderTheUI();
-  }
-
-      addToDoForm.addEventListener('submit', event => {
-        event.preventDefault();
-        createNewToDo();
-        console.log(toDos);
+        toDoList.appendChild(newLi);
+        newLi.appendChild(checkbox);
+        newLi.appendChild(deleteBtn);
       });
+  
+  addToDoForm.addEventListener('submit', event => {
+    event.preventDefault();
+    createNewToDo();
+    console.log(toDos);
+  });
 
-      renderTheUI();
-    }
+  renderTheUI();
+}
 
 window.onload = function() {
   onReady();

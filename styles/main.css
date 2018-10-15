@@ -1,25 +1,18 @@
-html {
+header {
+  background: url(../images/do-what-is-great.jpg) center / cover;
+  height: 50vh;
+  justify-content: center;
   text-align: center;
 }
 
-header {
-  background: url(../images/do-what-is-great.jpg) center / cover;
-  height: 60vh;
-  justify-content: center;
-  text-align: center
-  opacity: 0.5;
-}
-
-h1 {
-  padding-top: 40%;
-  text-align: center
-  position: fixed;
-  bottom: 0;
-  right: 0;
+ header h1 {
+   padding-top: 30%;
+   text-align: center;
 }
 
 form {
   padding-top: 15%;
+  text-align: center;
 }
 
 ul {
