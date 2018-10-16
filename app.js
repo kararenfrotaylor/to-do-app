@@ -32,7 +32,7 @@ function onReady(){
         deleteBtn.textContent = "delete";
 
         deleteBtn.addEventListener('click', () => {
-        return toDos.filter(toDo => toDo.id !== id);
+        return toDos.filter(toDos => toDo.id !== id);
 
         newLi.textContent = toDo.title;
 
@@ -53,3 +53,4 @@ function onReady(){
 window.onload = function() {
   onReady();
 };
+}
