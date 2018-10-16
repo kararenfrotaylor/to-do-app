@@ -23,7 +23,7 @@ function onReady(){
 
       toDoList.textContent = '';
 
-      toDos.forEach(function(toDo) {
+      toDos.forEach(function(toDos) {
         const newLi = document.createElement('li');
         const checkbox = document.createElement('input');
         checkbox.type = "checkbox";
@@ -32,9 +32,9 @@ function onReady(){
         deleteBtn.textContent = "delete";
 
         deleteBtn.addEventListener('click', () => {
-        return toDos.filter(toDos => toDo.id !== id);
+        return toDos.filter(toDos => toDos.id !== id);
 
-        newLi.textContent = toDo.title;
+        newLi.textContent = toDos.title;
 
         toDoList.appendChild(newLi);
         newLi.appendChild(checkbox);
