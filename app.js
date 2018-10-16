@@ -32,7 +32,9 @@ function onReady(){
         deleteBtn.textContent = "delete";
 
         deleteBtn.addEventListener('click', () => {
-        return toDos.filter(toDos => toDos.id !== id);
+          toDos = deleteToDos(toDos.id);
+          renderTheUI();
+        });
 
         newLi.textContent = toDos.title;
 
@@ -48,9 +50,10 @@ function onReady(){
   });
 
   renderTheUI();
-})
+}
 
 window.onload = function() {
   onReady();
 };
-}
+
+/*return toDos.filter(toDos => toDos.id !== id);*/
