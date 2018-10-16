@@ -29,7 +29,7 @@ function onReady(){
         checkbox.type = "checkbox";
 
         const deleteBtn = document.createElement('button');
-        delete.textContent = "delete";
+        deleteBtn.textContent = "delete";
 
         deleteBtn.addEventListener('click', () => {
         return toDos.filter(toDo => toDo.id !== id);
@@ -40,7 +40,7 @@ function onReady(){
         newLi.appendChild(checkbox);
         newLi.appendChild(deleteBtn);
       });
-  
+
   addToDoForm.addEventListener('submit', event => {
     event.preventDefault();
     createNewToDo();
@@ -48,7 +48,7 @@ function onReady(){
   });
 
   renderTheUI();
-}
+})
 
 window.onload = function() {
   onReady();
