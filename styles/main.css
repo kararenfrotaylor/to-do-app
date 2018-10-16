@@ -1,20 +1,31 @@
-header {
-  background: url(../images/do-what-is-great.jpg) center / cover;
-  height: 50vh;
-  justify-content: center;
-  text-align: center;
+
+html {
+  background-color: #7971ea;
 }
 
- header h1 {
-   padding-top: 30%;
+ h1 {
+   color: white;
+   padding-top: 20%;
    text-align: center;
 }
 
 form {
-  padding-top: 15%;
+  padding-top: 10%;
   text-align: center;
 }
 
 ul {
   list-style-type: none;
+  text-align: center;
 }
+
+#addToDoForm {
+  color: white;
+}
+
+#toDoList {
+  color: white;
+}
+
+/*background: url(../images/do-what-is-great.jpg) center / cover;
+height: 50vh;*/

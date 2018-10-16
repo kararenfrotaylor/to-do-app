@@ -1,59 +1,38 @@
 function onReady(){
-  let toDos = [];
-  let id = 0;
   const addToDoForm = document.getElementById('addToDoForm');
   const newToDoText = document.getElementById('newToDoText');
+  const toDoList = document.getElementById('toDoList');
 
-  function createNewToDo(){
-    if(!newToDoText.value){ return; }
 
-    toDos.push({
-      title: newToDoText.value,
-      complete: false,
-      id: ++id
-    });
-    newToDoText.value = '';
-  }
-
-    renderTheUI();
-  }
-
-    function renderTheUI(){
-      const toDoList = document.getElementById('toDoList');
-
-      toDoList.textContent = '';
-
-      toDos.forEach(function(toDos) {
-        const newLi = document.createElement('li');
-        const checkbox = document.createElement('input');
-        checkbox.type = "checkbox";
-
-        const deleteBtn = document.createElement('button');
-        deleteBtn.textContent = "delete";
-
-        deleteBtn.addEventListener('click', () => {
-          toDos = deleteToDos(toDos.id);
-          renderTheUI();
-        });
-
-        newLi.textContent = toDos.title;
-
-        toDoList.appendChild(newLi);
-        newLi.appendChild(checkbox);
-        newLi.appendChild(deleteBtn);
-      });
-
-  addToDoForm.addEventListener('submit', event => {
+  addToDoForm.addEventListener('submit', () => {
     event.preventDefault();
-    createNewToDo();
-    console.log(toDos);
+
+    let title = newToDoText.value;
+    let newLi = document.createElement('li');
+    let checkbox = document.createElement('input');
+
+    checkbox.type = "checkbox";
+
+    let deleteBtn = document.createElement('button');
+    deleteBtn.innerHTML = '<span>Delete</span>';;
+
+    newLi.textContent = title;
+    newLi.appendChild(checkbox);
+    newLi.appendChild(deleteBtn);
+
+    toDoList.appendChild(newLi);
+
+    newToDoText.value = '';
+
+    deleteBtn.addEventListener('click', function() {
+      newLi.parentNode.removeChild(newLi);
+    })
+
+    console.log(title);
   });
 
-  renderTheUI();
-}
+};
 
 window.onload = function() {
   onReady();
 };
-
-/*return toDos.filter(toDos => toDos.id !== id);*/
